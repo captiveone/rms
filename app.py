@@ -7,7 +7,7 @@ import json
 #Creating class for mongodb atlas connectivity
 class MongoAPI:
     def __init__(self, data):
-        self.client = MongoClient("mongodb+srv://Gaurav27:gaurav@cluster0.h0kk1.gcp.mongodb.net/rms?retryWrites=true&w=majority")
+        self.client = MongoClient("mongodb+srv://<YOUR_CREDENTIALS>/<DB_NAME>?retryWrites=true&w=majority")
         database = data['database']
         collection = data['collection']
         cursor = self.client[database]
